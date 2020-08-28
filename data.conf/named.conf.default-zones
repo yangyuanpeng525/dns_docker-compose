@@ -1,0 +1,5 @@
+zone "haha.com" {
+	type master;
+	file "/etc/bind/data.zones/haha.com.zone";
+};
+#
