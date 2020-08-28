@@ -6,6 +6,7 @@ git clone https://github.com/yangyuanpeng525/dns_docker-compose.git
 cd dns_docker-compose 
 >
 docker-compose up -d 
+>
 docker-compose ps
 >
 启动之后，测试模板中自带的域名：
