@@ -6,8 +6,9 @@ git clone https://github.com/yangyuanpeng525/dns_docker-compose.git
 cd dns_docker-compose 
 >
 docker-compose up -d 
+docker-compose ps
 >
-修改dns，测试模板中自带的域名：
+启动之后，测试模板中自带的域名：
 >
 nslookup www.haha.com   >>  127.0.0.4
 >
