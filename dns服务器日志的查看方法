@@ -1,0 +1,10 @@
+git clone https://github.com/yangyuanpeng525/dns_docker-compose.git
+cd dns_docker-compose 
+docker-compose up -d
+#根据错误信息添加网桥，添加完成再启动一次
+docker-compose ps
+#修改/etc/resolv.conf配置
+#查看看日志
+docker logs dns -f --tail 100
+#切换终端，nslookup  www.haha.com /ccc.haha.com(服务启动默认就有)
+#有日志信息输出
