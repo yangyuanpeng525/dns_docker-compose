@@ -16,3 +16,5 @@ nslookup www.haha.com   >>  127.0.0.4
 nslookup ccc.haha.com   >>  183.2.45.2
 >
 根据需求修改 dns_docker-compose/{data.conf,data.zones}两个文件
+>
+日志信息在logging文件中，若要修改日志配置，先修改logging文件，再重新docker build 生成新的镜像
