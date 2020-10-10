@@ -1,0 +1,19 @@
+version : '3.7'
+networks:
+  dns-net:
+    external: true
+services:
+  www.dns.com:
+        container_name : dns
+        hostname: dns
+        networks:
+          dns-net:
+        image: registry.cn-hangzhou.aliyuncs.com/yangyuanpeng/dns:bind9-logging
+        restart: on-failure
+        volumes:
+          - /etc/localtime:/etc/localtime:ro
+          - ./data.conf:/etc/bind/data.conf
+          - ./data.zones:/etc/bind/data.zones
+        ports:
+          - 53:53/udp
+
